@@ -111,7 +111,11 @@ def sub_float(vec, in_float):
     return vec3(x=(vec[0]-in_float), y=(vec[1]-in_float), z=(vec[2]-in_float)) 
 
 def mul_float(vec, in_float): 
-    return vec3(x=(vec[0]*in_float), y=(vec[1]*in_float), z=(vec[2]*in_float))
+    x=vec[0]*in_float
+    y=vec[1]*in_float
+    z=vec[2]*in_float
+    # return vec3(x=x, y=y, z=z)
+    return vec3(in_list=[x, y, z])
 
 def div_float(vec, in_float): 
     return vec3(x=(vec[0]/in_float), y=(vec[1]/in_float), z=(vec[2]/in_float))
@@ -122,7 +126,7 @@ def dot(vec1, vec2):
 
 def lerp(start_vec, end_vec, percent):
 
-    result = vec3(end_vec-start_vec)
+    result = vec3(vec=(end_vec-start_vec))
     result.imul_float(percent)
     result += start_vec
     return result

@@ -1,0 +1,6 @@
+Python Questions
+	how to properly set up @property & getter/funcs
+	
+line 63: do we REACH have to name parameter ea. call?
+
+mul_float float is not subscriptable

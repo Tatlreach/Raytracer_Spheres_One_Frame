@@ -1,17 +1,15 @@
 import vec3
 
 class ray:
-    def __init__(self, origin, dir):
-        self.origin = origin
-        self.dir = dir
+    def __init__(self, origin, direction):
+        self.start = origin
+        self.dir = direction
 
-    @property
     def origin(self):
-        return self.origin
+        return self.start
 
-    @property
     def direction(self):
         return self.dir
 
-    def point_at_parameter(self, dist):
-        return self.origin + vec3.mul_float(self.dir, dist)
+#    def point_at_parameter(self, dist):
+#        return self.start + vec3.mul_float(self.direction, dist)
