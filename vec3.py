@@ -14,6 +14,16 @@ class vec3:
     def __getitem__(self, index):
         return self.e[index]
 
+    @property
+    def x(self):
+        return self.e[0]
+    @property
+    def y(self):
+        return self.e[1]
+    @property
+    def z(self):
+        return self.e[2]
+
     def __eq__(self, vec):
         return ((vec[0]==self.e[0]) and (vec[1]==self.e[1]) and (vec[2]==self.e[2]))
 
